@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MP.master.cs" Inherits="MSE3Portal.MP" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>AE/PJ-MSE3-CN Project Catalog</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="JS/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="JS/bootstrap.min.js"></script>
+    <script type="text/javascript" src="JS/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="JS/lightbox.min.js"></script>
+    <script type="text/javascript" src="JS/main.js"></script>
+    <script type="text/javascript" src="JS/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="JS/imagesloaded.pkgd.min.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="Bookmark" href="img/favicon.ico" />
+    <link href="CSS/bootstrap.css" type="text/css" rel="stylesheet" />
+<%--    <link href="CSS/bootstrap-responsive.css" type="text/css" rel="stylesheet" />--%>
+    <link href="CSS/jquery-ui.css" type="text/css" rel="stylesheet" />
+    <link href="CSS/jquery-ui-timepicker-addon.css" type="text/css" rel="stylesheet" />
+    <link href="CSS/font-awesome.css" type="text/css" rel="stylesheet" />
+    <link href="CSS/lightbox.css" type="text/css" rel="stylesheet" />
+    <link href="CSS/docs.css" type="text/css" rel="stylesheet" />
+    <link href="CSS/navbar-fixed-top.css" type="text/css" rel="stylesheet" />
+    <link href="CSS/navbar-fixed-bottom.css" type="text/css" rel="stylesheet" />
+    <link href="CSS/myCSS.css" type="text/css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+		<script src="CSS/html5.js"></script>
+	<![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <form id="form1" runat="server">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <div class="navbar-left">
+                        <div class="title">
+                            <a href="Portal1.aspx">AE/MSE3-CN I4.0 Project Catelog</a>
+                        </div>
+                    </div>
+                    <div class="navbar-right">
+                        <img src="img/bosch_logo_english.png" height="48" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="content" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="divfooter"></div>
+                    <div class="navbar-right">
+                        <div class="divbottom" id="divbottom">AE/MSE3-CN Project Catalog v<%=GetVersion() %>, Copyright &copy;  2014-<%= System.DateTime.Now.ToString("yyyy") %> Powered by Jia Jack(AE/PJ-MSE3-CN), @BOSCH&trade;</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </form>
+</body>
+    <script lang="javascript" type="text/javascript">
+    $(function () { $("[data-toggle='tooltip']").tooltip(); });
+</script>
+</html>
